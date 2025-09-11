@@ -34,7 +34,7 @@ library("EpiNow2")
 library("rstan")
 #> Loading required package: StanHeaders
 #> 
-#> rstan version 2.32.6 (Stan version 2.32.2)
+#> rstan version 2.32.7 (Stan version 2.32.2)
 #> For execution on a local, multicore CPU with excess RAM we recommend calling
 #> options(mc.cores = parallel::detectCores()).
 #> To avoid recompilation of unchanged Stan programs, we recommend calling
@@ -194,10 +194,10 @@ summary(def)
 # elapsed time (in seconds)
 get_elapsed_time(def$fit)
 #>         warmup sample
-#> chain:1 27.360 27.048
-#> chain:2 33.805 19.095
-#> chain:3 33.064 24.555
-#> chain:4 34.182 29.239
+#> chain:1 27.314 27.021
+#> chain:2 34.003 19.188
+#> chain:3 32.783 24.941
+#> chain:4 34.226 28.945
 # summary plot
 plot(def)
 ```
@@ -228,10 +228,10 @@ summary(agp)
 # elapsed time (in seconds)
 get_elapsed_time(agp$fit)
 #>         warmup sample
-#> chain:1 17.897 28.005
-#> chain:2 19.861 28.966
-#> chain:3 17.763 28.042
-#> chain:4 20.268 17.828
+#> chain:1 17.889 29.008
+#> chain:2 19.833 28.588
+#> chain:3 17.918 28.044
+#> chain:4 20.649 18.159
 # summary plot
 plot(agp)
 ```
@@ -266,10 +266,10 @@ summary(dep)
 # elapsed time (in seconds)
 get_elapsed_time(dep$fit)
 #>         warmup sample
-#> chain:1 31.359 27.996
-#> chain:2 27.694 20.757
-#> chain:3 30.441 30.463
-#> chain:4 24.466 33.262
+#> chain:1 31.795 28.838
+#> chain:2 27.272 20.543
+#> chain:3 30.628 28.696
+#> chain:4 24.390 33.176
 # summary plot
 plot(dep)
 ```
@@ -318,10 +318,10 @@ summary(trunc)
 # elapsed time (in seconds)
 get_elapsed_time(trunc$fit)
 #>         warmup sample
-#> chain:1 30.744 21.518
-#> chain:2 30.152 25.655
-#> chain:3 29.763 21.657
-#> chain:4 32.512 24.148
+#> chain:1 30.194 21.352
+#> chain:2 30.375 25.157
+#> chain:3 30.062 21.726
+#> chain:4 32.417 24.034
 # summary plot
 plot(trunc)
 ```
@@ -358,10 +358,10 @@ summary(project_rt)
 # elapsed time (in seconds)
 get_elapsed_time(project_rt$fit)
 #>         warmup sample
-#> chain:1 36.939 33.936
-#> chain:2 36.873 31.181
-#> chain:3 33.125 31.308
-#> chain:4 38.751 32.907
+#> chain:1 37.872 33.716
+#> chain:2 37.503 33.437
+#> chain:3 34.165 32.048
+#> chain:4 39.404 34.312
 # summary plot
 plot(project_rt)
 ```
@@ -391,10 +391,10 @@ summary(fixed)
 # elapsed time (in seconds)
 get_elapsed_time(fixed$fit)
 #>         warmup sample
-#> chain:1  1.594  0.992
-#> chain:2  1.876  0.987
-#> chain:3  1.766  1.037
-#> chain:4  1.544  1.030
+#> chain:1  1.586  1.011
+#> chain:2  1.910  0.972
+#> chain:3  1.793  0.995
+#> chain:4  1.587  1.025
 # summary plot
 plot(fixed)
 ```
@@ -437,10 +437,10 @@ summary(bkp)
 # elapsed time (in seconds)
 get_elapsed_time(bkp$fit)
 #>         warmup sample
-#> chain:1  2.636  4.027
-#> chain:2  3.373  3.806
-#> chain:3  2.776  3.795
-#> chain:4  2.942  4.100
+#> chain:1  2.679  4.119
+#> chain:2  3.483  3.827
+#> chain:3  2.812  3.744
+#> chain:4  3.044  4.146
 # summary plot
 plot(bkp)
 ```
@@ -472,10 +472,10 @@ summary(rw)
 # elapsed time (in seconds)
 get_elapsed_time(rw$fit)
 #>         warmup sample
-#> chain:1  7.163 15.637
-#> chain:2  9.244 15.295
-#> chain:3  7.316 15.986
-#> chain:4  7.954 14.878
+#> chain:1  7.318 15.666
+#> chain:2  9.278 15.552
+#> chain:3  7.313 16.175
+#> chain:4  8.156 15.152
 # summary plot
 plot(rw)
 ```
@@ -504,10 +504,10 @@ summary(no_delay)
 # elapsed time (in seconds)
 get_elapsed_time(no_delay$fit)
 #>         warmup sample
-#> chain:1 31.395 30.495
-#> chain:2 38.438 31.528
-#> chain:3 30.985 36.548
-#> chain:4 33.849 31.746
+#> chain:1 31.831 30.843
+#> chain:2 38.958 32.605
+#> chain:3 31.245 35.994
+#> chain:4 33.213 31.638
 # summary plot
 plot(no_delay)
 ```
@@ -534,7 +534,7 @@ non_parametric <- estimate_infections(reported_cases,
 summary(non_parametric)
 #>                         measure                  estimate
 #>                          <char>                    <char>
-#> 1:       New infections per day       2544 (2503 -- 2585)
+#> 1:       New infections per day       2544 (2503 -- 2582)
 #> 2:   Expected change in reports                Decreasing
 #> 3:   Effective reproduction no.       0.92 (0.83 -- 0.96)
 #> 4:               Rate of growth -0.024 (-0.025 -- -0.022)
@@ -542,10 +542,10 @@ summary(non_parametric)
 # elapsed time (in seconds)
 get_elapsed_time(non_parametric$fit)
 #>         warmup sample
-#> chain:1  3.815  0.613
-#> chain:2  3.805  0.585
-#> chain:3  3.811  0.634
-#> chain:4  3.538  0.640
+#> chain:1  3.619  0.560
+#> chain:2  3.393  0.484
+#> chain:3  3.600  0.654
+#> chain:4  3.681  0.585
 # summary plot
 plot(non_parametric)
 ```
